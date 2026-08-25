@@ -3,12 +3,15 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Register />} />
-        {/* <Route path="/register" element={<Register />} />*/}
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
         <Route
           path="/dashboard"
           element={
@@ -21,4 +24,5 @@ function App() {
     </BrowserRouter>
   );
 }
+
 export default App;
